@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" href="../CSS/1_inicio.css">
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+	rel="stylesheet" />
+<link rel="icon" href="../IMG/Logo de pestaña.PNG">
+<title>Inicio | Industrias Asociadas</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- Encabezado -->
+		<div class="row justify-centent-center aling-content-center">
+			<div class="col-12 encabezado">
+				<h5>
+					<i class='bx bxs-phone icon-e'></i> (601)371 2999)&nbsp;&nbsp; <i
+						class='bx bx-envelope icon-e'></i> ventas@industriasasociadas.com
+					<img th:src="@{/img/logo_de_colombia.jpeg}" width="30">
+				</h5>
+			</div>
+		</div>
+
+		<!-- Barra de navegacion -->
+		<nav class="navbar navbar-expand-lg navbar-light info barra">
+
+			<a class="navbar-brand"> <img src="../IMG/Logo barra.png"
+				style="width: 350px;">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse contenedor"
+				id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<!-- BOTONES -->
+					<li class="nav-item active botn"><a class="nav-link"
+						th:href="@{/inicio/inicio}">Inicio <span class="sr-only">(current)</span></a></li>
+
+					<li class="nav-item active  botn"><a class="nav-link"
+						th:href="@{/inventario/productos}">Productos<span class="sr-only">(current)</span></a></li>
+
+					<li class="nav-item active  botn"><a class="nav-link"
+						th:href="@{/marcas/marcas}">Marcas<span class="sr-only">(current)</span></a></li>
+
+					<li class="nav-item active  botn"><a class="nav-link"
+						th:href="@{/iniciarSesion/iniciar_sesion}">Iniciar Sesion<span
+							class="sr-only">(current)</span></a></li>
+
+					<form class="form-inline my-2 my-lg-0">
+						<li id="item">
+							<div class="buscar">
+								<i class='bx bx-search-alt-2'></i><input type="text"
+									placeholder="   Buscar Producto" required></i>
+							</div>
+						</li>
+					</form>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Slider -->
+		<div id="carouselExampleIndicators" class="carousel slide"
+			data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0"
+					class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner slider">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="../IMG/Slider 1.jfif">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="../IMG/Slider 2.jpg">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="../IMG/Slider 3.jpg">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="../IMG/Slider 4.jpg">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators"
+				role="button" data-slide="prev"> <span
+				class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="sr-only">Previous</span>
+			</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
+				role="button" data-slide="next"> <span
+				class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<!-- Tarjetas -->
+		<div class="tarj row">
+
+			<!-- Tarjeta 1 -->
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img th:src="@{/img/Targeta 1.jpeg}" class="card-img-top"
+						alt="Imagen tarjeta">
+					<div class="car-body">
+						<h4>Soluciones en Presión</h4>
+						<p class="card-text">
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Trasmisores
+								De Presión</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Manómetros
+								Industriales</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Manómetro
+								Sanitario</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Presostatos</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Switch
+								de Presión</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Válvulas
+								Reguladoras de Presión</a>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tarjeta 2 -->
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img th:src="@{/img/Targeta 2.jpeg}" class="card-img-top"
+						alt="Imagen tarjeta">
+					<div class="car-body">
+						<h4>Soluciones en Temperatura</h4>
+						<p class="card-text">
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Termómetros
+								Industriales</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Transmisores
+								de Temperatura</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Controles
+								de Temperatura</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Termostatos</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Válvulas
+								Termostáticas</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Dataloggers</a>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tarjeta 3 -->
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img th:src="@{/img/Targeta 3.jpeg}" class="card-img-top"
+						alt="Imagen tarjeta">
+					<div class="car-body">
+						<h4>Soluciones en Flujo</h4>
+						<p class="card-text">
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Medidores
+								Tipo Turbina</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Ultrasonico</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Electromagnético
+								Sanitario</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Válvulas
+								Proporcionales</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Medidor
+								de Area Variable</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Switch
+								De Flujo</a>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tarjeta 4 -->
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img th:src="@{/img/Targeta 4.jpeg}" class="card-img-top"
+						alt="Imagen tarjeta">
+					<div class="car-body">
+						<h4>Soluciones en Analítica</h4>
+						<p class="card-text">
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Tester
+								de bolsillo</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Medidores
+								de Mesa</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Turbidímetro</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Fotómetro
+								multiparamétrico</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Medidor
+								Portátil</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Refractómetros</a>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tarjeta 5 -->
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img th:src="@{/img/Targeta 5.jpeg}" class="card-img-top"
+						alt="Imagen tarjeta">
+					<div class="car-body">
+						<h4>Soluciones en Neumática</h4>
+						<p class="card-text">
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Actuadores
+								Neumáticos</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Cilindros
+								Cuadrados</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Cilindros
+								Redondos</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Unidades
+								de mantenimiento</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Electro
+								Válvulas</a>
+						</p>
+						<p>
+							<a th:href="@{#}"><i class="bx bx-chevrons-right"></i>Mangueras</a>
+						</p>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Video -->
+		<div class="container" id="video">
+			<h4 class="video">Conozca cómo puede adquirir todos nuestros
+				productos desde su casa o empresa</h4>
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item"
+					src="https://www.youtube.com/embed/KQiYuDSx81Y" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<!-- Cards -->
+		<h1 class="nove text-center nov">Nuevos productos</h1>
+
+		<div class="body">
+			<div class="container__card">
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto1.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Minitermómetro De Infrarrojos De Amplio rango 42510A</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: FESTO</h6>
+						<h5>Categoria: Sistema para vapor</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1"><s>0%</s></span>&nbsp;&nbsp; <span
+								class="precio2"><b>$187.500</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto2.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Termostato Industrial RT</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: Danfoss</h6>
+						<h5>Categoria: Válvulas</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">15%</span>&nbsp;&nbsp; <span
+								class="precio2"><b>$235.500</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto3.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Presostato Para Aplicaciones Livianas KPI</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: AUTONICS</h6>
+						<h5>Categoria: Temperatura</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1"><s>0%</s></span>&nbsp;&nbsp; <span
+								class="precio2"><b>$575.850</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto4.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Presostato Para Bombas Y Compresosres CS</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: ROCKAGE</h6>
+						<h5>Categoria: Humedad</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">30%</span>&nbsp;&nbsp; <span
+								class="precio2"><b>$460.590</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto5.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Termohigrómetro Digital Para Exteriores e Interiores</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: SPENCE</h6>
+						<h5>Categoria: Neumática</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">20%</span>&nbsp;&nbsp; <span
+								class="precio2"><b>$782.547</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto6.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Transmisor De Humedad / Temperatura THD-R</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: CEM</h6>
+						<h5>Categoria: Herramientas Ambientales</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">5%</span>&nbsp;&nbsp; <span class="precio2"><b>$762.400</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto7.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Regulador de Presión D-36</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: DWYER</h6>
+						<h5>Categoria: Herramientas Electricas</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">3%</span>&nbsp;&nbsp; <span class="precio2"><b>$856.250</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto8.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Tacometro Con Y Sin Contacto DT-6236B</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: HANNA INSTRUMENTS</h6>
+						<h5>Categoria: Sensores Y Controladores</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">45%</span>&nbsp;&nbsp; <span
+								class="precio2"><b>$564.715</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+				<div class="cards b1">
+					<div class="prod">
+						<img src="../IMG/Productos/producto9.PNG" alt="">
+					</div>
+					<div class="nom">
+						<h5>Cilindro Redondo ISO 6432 DSNU</h5>
+					</div>
+					<div class="info__descripcion">
+						<h6>Marca: AUTONICS</h6>
+						<h5>Categoria: Nivel/Indicadores</h5>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Pariatur beatae libero perspiciatis soluta dignissimos harum non
+							alias incidunt? Assumenda cum non tenetur totam blanditiis
+							voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic
+							accusantium vitae? Ullam cumque deserunt atque magni officia
+							expedita accusantium non mollitia, praesentium pariatur iusto
+							repudiandae, illum ab!</p>
+						<div class="precio">
+							<span class="precio1">20%</span>&nbsp;&nbsp; <span
+								class="precio2"><b>$458.974</b></span>
+						</div>
+						<a class="btn" th:href="@{/descargar/new}">COMPRAR
+							AHORA</a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="grafica">
+		<script>
+            window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    exportEnabled: true,
+                    animationEnabled: true,
+                    title: {
+                        text: "Marcas mas compradas"
+                    },
+                    legend: {
+                        cursor: "pointer",
+                        itemclick: explodePie
+                    },
+                    data: [{
+                        type: "pie",
+                        showInLegend: true,
+                        toolTipContent: "{name}: <strong>{y}%</strong>",
+                        indexLabel: "{name} - {y}%",
+                        dataPoints: [
+                            { y: 24, name: "FESTO", exploded: true },
+                            { y: 20, name: "A.R.T" },
+                            { y: 5, name: "DANFOSS" },
+                            { y: 3, name: "ROCKAGE" },
+                            { y: 7, name: "AUTONICS" },
+                            { y: 12, name: "SPENCE" },
+                            { y: 14, name: "CEM" },
+                            { y: 19, name: "HANNA" },
+                            { y: 18, name: "EXTECH" }
+                        ]
+                    }]
+                });
+                chart.render();
+            }
+
+            function explodePie(e) {
+                if (typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                    e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+                } else {
+                    e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+                }
+                e.chart.render();
+
+            }
+        </script>
+		<center>
+			<div id="chartContainer" style="height: 400px; width: 70%;"></div>
+		</center>
+	</div>
+
+	<div class="maps">
+		<section>
+			<div class="container if">
+				<h1 class="text-center tit">Nuestras Sedes</h1>
+				<div class="row">
+					<i class='bx bx-map'></i>
+					<h3>Sede Bogotá</h3>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63630.30409074115!2d-74.088693!3d4.612986000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9971e268098d%3A0xcad0d3490a48f727!2zQ3JhLiAyNyAjMTMtOTUsIExvcyBNw6FydGlyZXMsIEJvZ290w6E!5e0!3m2!1ses!2sco!4v1654314860767!5m2!1ses!2sco"
+						width="100%" height="300" style="border: 0;" allowfullscreen=""
+						loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<i class='bx bx-map'></i>
+					<h3>Sede Barranquilla</h3>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d125332.64742781635!2d-74.783873!3d10.990128!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d7cfce60811%3A0xb95066e2c096ac39!2sCl.%2045%20%2350b-8%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1654315074321!5m2!1ses!2sco"
+						width="100%" height="300" style="border: 0;" allowfullscreen=""
+						loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<i class='bx bx-map'></i>
+					<h3>Sede Cartagena</h3>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62791.28062734307!2d-75.501096!3d10.385387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31775541f0d351fc!2sCentro%20Comercial%20Mamonal%20Plaza!5e0!3m2!1ses!2sco!4v1654315122934!5m2!1ses!2sco"
+						width="100%" height="300" style="border: 0;" allowfullscreen=""
+						loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<i class='bx bx-map'></i>
+					<h3>Sede Medellín</h3>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63459.862953339376!2d-75.592143!3d6.23187!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429becef6361d%3A0x5b68366cd66b877d!2zQ3JhLiA3MSAjMzAtMTUsIE1lZGVsbMOtbiwgQmVsw6luLCBNZWRlbGzDrW4sIEFudGlvcXVpYQ!5e0!3m2!1ses!2sco!4v1654315217343!5m2!1ses!2sco"
+						width="100%" height="300" style="border: 0;" allowfullscreen=""
+						loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<center>
+
+		<div class="formulario">
+			<section>
+
+				<div class="container-fluid">
+					<h1 class="col-md text-center">
+						CONTACTENOS <i class='bx bxs-phone-call bx-tada'></i>
+					</h1>
+
+					<div class="row">
+
+						<div class="col-md p-3" style="margin-top: 150px;">
+
+							<div class="container">
+								<div class="row">
+									<div class="col-md">
+
+										<div class="Ti1">
+											<h4>Bogotá</h4>
+										</div>
+										<p>
+											Carrera 27 No. 13-95<br> Tel: <a href="tel://6013712999">+(601)
+												371 2999 </a><br> Cel: WhatsApp <a
+												href="tel://573208550744">+57 320 855 0744 </a>
+										</p>
+
+									</div>
+
+									<div class="col-md">
+										<div class="Ti2">
+											<h4>Barranquilla</h4>
+										</div>
+										<p>
+											Cll. 45 No. 50 B-08<br> Locales 3 y 4<br> Tel: <a
+												href="tel://6053723704">+(605) 316 1860 </a><br> Cel:<a
+												href="tel://57310 563 4603">+57 310 563 4603</a>
+										</p>
+
+									</div>
+									<div class="col-md">
+										<div class="Ti3">
+											<h4>Cartagena</h4>
+										</div>
+										<p>
+											Diagonal 30 No. 54 -206 Local 5<br> CC. Mamonal Plaza<br>
+											Tel: <a href="tel://60567471380">+(605) 642 9330</a><br>
+											Cel: <a href="tel://573105754526"> +57 310 575 4526</a>
+										</p>
+									</div>
+
+									<div class="col-md">
+										<div class="Ti4">
+											<h4>Medellín</h4>
+										</div>
+										<p>
+											Carrera. 71 # 30 - 15<br> Belén Rosales<br> Tel:<a
+												href="tel://6044486667"> +(604) 204 2310</a><br> Cel:<a
+												href="tel:// 57320856 6927"> +57 320 856 6927</a>
+										</p>
+									</div>
+									<div class="col-md">
+										<div class="Ti5">
+											<h4>Cali</h4>
+										</div>
+										<p>
+											Carrera. 71 # 30 - 15<br> Belén Rosales<br> Tel:<a
+												href="tel://6044486667"> +(604) 204 2310</a><br> Cel:<a
+												href="tel:// 57320856 6927"> +57 320 856 6927</a>
+										</p>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+
+						<!-- Formulario -->
+
+						<div class="col-md p-3">
+							<h3 class="text-center">
+								Su opinión es importante <i class='bx bx-like'></i>
+							</h3>
+
+
+							<form class="formulario1" action="@{/inicio/inicio}"
+								onsubmit="return opinion()">
+
+								<div class="form-group">
+									<label for="">Nombres</label> <input type="text"
+										class="form-control" id="nombres"
+										placeholder="Escriba sus nombres" required>
+								</div>
+								<div class="form-group">
+									<label for="">Apellidos</label> <input type="text"
+										class="form-control" id="apellidos"
+										placeholder="Escriba sus apellidos" required>
+								</div>
+
+								<div class="form-group">
+									<label for="">Correo</label> <input type="email"
+										class="form-control" id="email"
+										placeholder="Escriba su Correo" required>
+								</div>
+
+								<div class="form-group">
+									<label for="">Ciudad</label> <input type="text"
+										class="form-control" id="ciudad"
+										placeholder="Escriba el Asunto" required>
+								</div>
+
+								<div class="asunto">
+									<div class="form-group">
+										<label for="">Escriba su mensaje</label>
+										<textarea class="form-control" id="mensaje" rows="3" required></textarea>
+									</div>
+								</div>
+
+								<div class="text-center block">
+									<button type="submit" class="btn btn-primary" value="Enviar"
+										onclick="enviar()">Enviar</button>
+								</div>
+							</form>
+						</div>
+						<!--form-->
+					</div>
+				</div>
+			</section>
+		</div>
+	</center>
+
+
+	<footer class="bg-dark text-center text-white">
+		<!-- Grid container -->
+		<div class="container p-4 pb-0">
+			<!-- Section: Social media -->
+			<section class="mb-4">
+				<!-- Facebook -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class='bx bxl-facebook ic'></i></a>
+
+				<!-- Twitter -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class='bx bxl-twitter ic'></i></a>
+
+				<!-- Google -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class='bx bxl-google ic'></i></a>
+
+				<!-- Instagram -->
+				<a class="btn btn-outline-light btn-floating m-1" href="#!"
+					role="button"><i class='bx bxl-instagram ic'></i></a>
+
+
+			</section>
+			<!-- Section: Social media -->
+		</div>
+		<!-- Grid container -->
+
+		<!-- Copyright -->
+		<div class="text-center p-3"
+			style="background-color: rgba(15, 73, 182, 0.801);">
+			© 2022 Copyright: <a class="text-white"
+				href="https://mdbootstrap.com/">GAES 6</a>
+		</div>
+		<!-- Copyright -->
+	</footer>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<!--  Scripts de validación-->
+	<script src="../JS/4 Formulario index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

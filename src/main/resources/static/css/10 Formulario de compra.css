@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Encabezado*/
+.encabezado {
+    background: #0079c1;
+}
+
+.encabezado h5 {
+    color: #fff;
+    margin-left: 50px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/*Barra*/
+.barra{
+    margin-bottom: 20px;
+}
+
+.botn{
+    margin-top: auto;
+}
+
+.contenedor .botn:hover{
+    transform: translateY(-1px);
+}
+
+.buscar input {
+    width: 40px;
+    height: 43px;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+    outline: none;
+    border: 2px solid #0079c1;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.buscar:hover input {
+    width: 150px;
+}
+
+.buscar input:focus {
+    width: 150px;
+}
+
+.bx-search-alt-2{
+    color: #0079c1;
+    font-size: 30px;
+    position: absolute;
+    margin: 6px;
+}
+
+/*Formulario de compra*/
+
+.container{
+    color: black;
+    padding: 0 1.5em;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+.logo{
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 50px;
+    color: #0079c1;
+}
+
+.contenido{
+    box-shadow: 0 0 20px 0 rgb(66, 65, 65);
+}
+
+.contenido h3{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.contenido label{
+    color: white;
+    font-size: 25px;
+}
+
+.contenido >  * {
+    padding: 1em;
+}
+
+.contenido{
+    background: rgb(78, 76, 76);
+    border-radius: 30px;
+}
+
+.contenido form p{
+    margin: 0;
+    padding: 1em;
+}
+
+.contenido form button,
+.contenido form input,
+.contenido form select,
+.contenido form textarea{
+    border-radius: 30px;
+    width: 100%;
+    padding: .7em;
+    border: none;
+    outline: none;
+    color: rgb(56, 54, 54);
+    font-size: 18px;
+    border: solid 5px #0079c1;
+}
+
+.contenido form button{
+    background: #0079c1;
+    color: white;
+    font-size: 20px;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: 30px;
+}
+
+.contenido form button:hover,
+.contenido form button:focus{
+    background: rgb(230, 66, 6);
+    transition: background-color 0.5s ease-out;
+    outline: 0;
+}
+
+.contenido .prodct-img{
+    border-radius: 20px;
+    border: solid 5px rgb(230, 66, 6);
+}
+/*Fin*/
+
+.btn-añadir{
+    display: flex;
+    margin: 20px;
+}
+
+.btn-añadir a{
+    padding: 10px 20px;
+    background: rgb(230, 66, 6);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    border-radius: 30px;
+}
+
+.k1{
+    font-size: 25px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.btn-añadir .gren:hover{
+    box-shadow: 1px 1px 30px -5px rgb(230, 66, 6);   
+}

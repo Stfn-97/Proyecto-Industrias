@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/10 Formulario de compra.css">
+    <link rel="icon" href="../IMG/Logo de pestaña.PNG">
+    <title>Formulario de Compra | Industrias Asociadas</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Encabezado -->
+        <div class="row justify-centent-center aling-content-center">
+            <div class="col-12 encabezado">
+                <h5>
+                    <i class='bx bxs-phone icon-e'></i> (601)371 2999)&nbsp;&nbsp;
+                    <i class='bx bx-envelope icon-e'></i> ventas@industriasasociadas.com
+                    <img src="../IMG/logo_de_colombia.jpeg" alt width="30" />
+                </h5>
+            </div>
+        </div>
+
+        <!-- Barra de navegacion -->
+        <nav class="navbar navbar-expand-lg navbar-light info barra">
+
+            <a class="navbar-brand" th:href="@{/inicio}">
+                <img src="../IMG/Logo barra.png" style="width: 350px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse contenedor" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- BOTONES -->
+                    <li class="nav-item active botn">
+                        <a class="nav-link" th:href="@{/inicio/inicio}">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/inventario/productos}">Productos<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/marcas/marcas}">Marcas<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/perfilC/perfil_cliente}">Cuenta<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <li id="item">
+                            <div class="buscar">
+                                <i class='bx bx-search-alt-2'></i><input type="text" placeholder="   Buscar Producto"
+                                    required></i>
+                            </div>
+                        </li>
+                    </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <h1 class="logo">INDUSTRIAS ASOCIADAS S.A.S</h1>
+
+            <div class="btn-añadir">
+                <a th:href="@{/devolucion/formulario_devolucion}" class="gren">DEVOLUCIÓN&nbsp;<i class='bx bx-right-arrow-alt bx-tada k1' ></i></a>
+            </div>
+
+            <div class="contenido">
+                <h3>FORMULARIO DE COMPRA&nbsp;<i class='bx bx-shopping-bag bx-tada' ></i></h3>
+
+                <center><div class="BT">
+                    <img class="prodct-img" src="../IMG/Productos/producto2.PNG" width="20%" height="20%">
+                </div></center>
+
+                <form th:action="@{/descargar/guardar}" th:object="${Ventas}" method="post">
+
+					<p>
+                        <label for="idVenta" hidden>ID Venta</label>
+                        <input type="text" th:field="*{ID_Venta}" name="idVenta" id="idVenta" required hidden>
+                    </p> 
+
+                    <p>
+                        <label for="nombres">Nombre</label>
+                        <input type="text" name="nombres" id="nombres" placeholder="Escriba su nombre..." required>
+                    </p>
+                    
+                    <p>
+                        <label for="correo">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Escriba su correo..." required>
+                    </p>
+
+                    <p>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Escriba su teléfeno..." required>
+                    </p>
+
+                    <p class="BT">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" name="direccion" id="direccion" placeholder="Escriba su dirección..." required>
+                    </p>
+					
+					<p class="BT">
+                        <label for="fecha">Fecha y hora de compra</label>
+                        <input id="fecha" th:field="*{Fecha_y_hora_venta}" type="date" name="fecha" required>
+                    </p>
+					
+                    <p class="BT">
+                        <label for="nombreP">Nombre del producto</label>
+                        <input id="nombreP" type="text" name="nombreP" value="Termostato Industrial RT" readonly required>
+                    </p>
+
+					<p>
+                        <label for="unidades">Unidades a comprar</label>
+                        <input id="unidades" th:field="*{Unidades_adquiridas}" type="number" name="unidades" min="1" max="1000" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="precio">Precio de unidad</label>
+                        <input id="precio" th:field="*{Precio_unidad}" type="text" name="precio" required>
+                    </p>
+                    
+                    <p>
+                        <label for="precioT">Precio total</label>
+                        <input id="precioT" th:field="*{Precio_total}" type="text" name="precioT" required>
+                    </p>
+
+                    <p class="BT">
+                        <button type="submit" value="Guardar">COMPRAR</button>
+                    </p>
+
+                </form>
+
+            </div>
+        </div>
+
+        
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class='bx bxl-facebook ic'></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class='bx bxl-twitter ic'></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class='bx bxl-google ic'></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class='bx bxl-instagram ic'></i></a>
+
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(15, 73, 182, 0.801);">
+            © 2022 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">GAES 6</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>

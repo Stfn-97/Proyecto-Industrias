@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Encabezado*/
+.encabezado {
+    background: #0079c1;
+}
+
+.encabezado h5 {
+    color: #fff;
+    margin-left: 50px;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/*Barra*/
+.barra{
+    margin-bottom: 50px;
+}
+
+.contenedor .botn:hover{
+    transform: translateY(-1px);
+}
+
+.buscar input {
+    width: 40px;
+    height: 43px;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+    outline: none;
+    border: 2px solid #0079c1;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.buscar:hover input {
+    width: 150px;
+}
+
+.buscar input:focus {
+    width: 150px;
+}
+
+.bx-search-alt-2{
+    color: #0079c1;
+    font-size: 30px;
+    position: absolute;
+    margin: 6px;
+}
+
+.linea h1{
+    color: #0079c1;
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+/* galira de marcas*/
+
+.galeria{
+    background: white;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    border-radius: 8px;
+}

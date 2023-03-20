@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/9 Dashboard-Empleado.css">
+    <link rel="icon" href="../IMG/Logo de pestaña.PNG">
+
+    <title>Empleado | Industrias Asociadas</title>
+</head>
+
+<body>
+
+    <div class="navegacion">
+        <ul>
+            <li>
+                <a th:href="@{/perfilE/perfil_empleado}">
+                    <span class="icon"><i class='bx bx-user-circle bx-tada i1'></i></span>
+                    <span class="titulo">Empleado</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/inicioUsuario/inicio_usuario}">
+                    <span class="icon"><i class='bx bx-home i1'></i></span>
+                    <span class="titulo">Inicio</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/actializarIn/empleado_actualizar_inventario}">
+                    <span class="icon"><i class='bx bx-message-square-add bx-rotate-270 i1'></i></span>
+                    <span class="titulo">Actualizar Inventario</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/datos/empleado_datos_productos}">
+                    <span class="icon"><i class='bx bx-data i1'></i></span>
+                    <span class="titulo">Datos De Productos</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/tareas/empleado_tareas_pendientes}">
+                    <span class="icon"><i class='bx bx-list-check i1'></i></span>
+                    <span class="titulo">Tareas Pendientes</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/inicio/inicio}">
+                    <span class="icon"><i class='bx bx-exit i1'></i></span>
+                    <span class="titulo">Salir</span>
+                </a>
+            </li>
+        </ul>
+        <div class="toglee"></div>
+
+    </div>
+
+    <section class="dash">
+
+        <div class="top">
+            <img src="../IMG/logo industrias.png" width="100px">
+
+            <div class="buscar">
+                <i class='bx bx-search bx-flashing a1'></i>
+                <input type="search" placeholder="Buscar...">
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="contenido-2">
+                <div class="titulo">
+                    <i class='bx bxs-user-badge'></i>
+                    <span class="text">BIENVENIDO EMPLEADO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grafica">
+
+            <script type="text/javascript">
+                window.onload = function () {
+                    var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title: {
+                            text: "Ventas De Este Mes",
+                        },
+                        exportEnabled: true,
+                        axisX:{
+                            minimum: -900, 
+                            interval: 100,
+                        },
+                        data: [
+                        {
+                            type: "area",
+                            fillOpacity: .4,
+                            lineThickness: 3,
+                            dataPoints: [
+                                { x: -100, y: 71 },
+                                { x: -200, y: 55 },
+                                { x: -300, y: 50 },
+                                { x: -400, y: 65 },
+                                { x: -500, y: 105, markerType: "circle", markerSize: 9, markerColor: "brown", indexLabel: "Venta mas alta" },
+                                { x: -600, y: 68 },
+                                { x: -700, y: 28 },
+                                { x: -800, y: 34 },
+                                { x: -900, y: 14}
+                            ]
+                        }
+                        ]
+                    });
+                    chart.render();
+                }
+                </script>
+                <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+        </div>
+
+        <div class="cards">
+            <div class="car car1">
+                <i class='bx bx-like bx-tada' ></i>
+                <span class="text">CALIFICACIONES BUENAS</span>
+                <span class="number">%92.57</span>
+            </div>
+
+            <div class="car car2">
+                <i class='bx bx-dislike bx-tada' ></i>
+                <span class="text">CALIFICACIONES MALAS</span>
+                <span class="number">%7.43</span>
+            </div>
+
+    </section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script>
+        let navegacion = document.querySelector('.navegacion');
+        let toglee = document.querySelector('.toglee');
+        toglee.onclick = function () {
+            navegacion.classList.toggle('active')
+        }
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>

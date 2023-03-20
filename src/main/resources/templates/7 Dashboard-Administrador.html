@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/7 Dashboard-Administrador.css">
+    <link rel="icon" href="../IMG/Logo de pestaña.PNG">
+
+    <title>Administrador | Industrias Asociadas</title>
+</head>
+
+<body>
+
+    <div class="navegacion">
+        <ul>
+            <li>
+                <a th:href="@{/perfilA/perfil_administrador}">
+                    <span class="icon"><i class='bx bx-user-circle bx-tada i1'></i></span>
+                    <span class="titulo">Administrador</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/inicioUsuario/inicio_usuario}">
+                    <span class="icon"><i class='bx bx-home i1'></i></span>
+                    <span class="titulo">Inicio</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/estadisticas/administrador_estadisticas}">
+                    <span class="icon"><i class='bx bx-bar-chart-alt-2 i1'></i></span>
+                    <span class="titulo">Estadisticas</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/aInventario/administrador_inventario}">
+                    <span class="icon"><i class='bx bx-store i1'></i></span>
+                    <span class="titulo">Ver Inventario</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/descargar/descargar_informe}">
+                    <span class="icon"><i class='bx bxs-download i1'></i></span>
+                    <span class="titulo">Descargar Informe</span>
+                </a>
+            </li>
+
+            <li>
+                <a th:href="@{/inicio/inicio}">
+                    <span class="icon"><i class='bx bx-exit i1'></i></span>
+                    <span class="titulo">Salir</span>
+                </a>
+            </li>
+        </ul>
+        <div class="toglee"></div>
+
+    </div>
+
+    <section class="dash">
+        <div class="top">
+            <img src="../IMG/logo industrias.png" width="100px">
+
+            <div class="buscar">
+                <i class='bx bx-search bx-flashing a1'></i>
+                <input type="search" placeholder="Buscar...">
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="contenido-2">
+                <div class="titulo">
+                    <i class='bx bxs-user-pin'></i>
+                    <span class="text">BIENVENIDO SEÑOR ADMINISTRADOR</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="car car1">
+                <i class='bx bxl-product-hunt' ></i>
+                <span class="text">PRODUCTOS EN INVENTARIO</span>
+                <span class="number">14.765.348</span>
+            </div>
+
+            <div class="car car2">
+                <i class='bx bxs-store'></i>
+                <span class="text">VENTAS REALIZADAS EN ESTE AÑO</span>
+                <span class="number">9.265.305</span>
+            </div>
+
+            <div class="car car3">
+                <i class='bx bxs-shopping-bag' ></i>
+                <span class="text">VENTAS DE ESTE MES</span>
+                <span class="number">765.348</span>
+            </div>
+        </div>
+
+        <div class="grafica">
+
+            <script>
+              window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                  exportEnabled: true,
+                  animationEnabled: true,
+                  title: {
+                    text: "Actividad de ingreso mesuales"
+                  },
+                  axisY: {
+                    title: "Menos actividad de ingresos",
+                    titleFontColor: "#4F81BC",
+                    lineColor: "#4F81BC",
+                    labelFontColor: "#4F81BC",
+                    tickColor: "#4F81BC"
+                  },
+                  axisY2: {
+                    title: "Mayor actividad de ingresos",
+                    titleFontColor: "#C0504E",
+                    lineColor: "#C0504E",
+                    labelFontColor: "#C0504E",
+                    tickColor: "#C0504E"
+                  },
+                  toolTip: {
+                    shared: true
+                  },
+                  legend: {
+                    cursor: "pointer",
+                    itemclick: toggleDataSeries
+                  },
+                  data: [{
+                    type: "column",
+                    name: "Meses de menor actividad",
+                    legendText: "Menos actividad",
+                    showInLegend: true,
+                    dataPoints: [
+                      { label: "Julio", y: 1.1 },
+                      { label: "Agosto", y: 2.1 },
+                      { label: "Septiembre", y: 3.1 },
+                      { label: "Octubre", y: 3.1 },
+                      { label: "Noviembre", y: 0.1 },
+                      { label: "Diciembre", y: 3.4 }
+                    ]
+                  },
+                  {
+                    type: "column",
+                    name: "Meses de mayor actividad",
+                    legendText: "Mayor actividad",
+                    axisYType: "secondary",
+                    showInLegend: true,
+                    dataPoints: [
+                      { label: "Enero", y: 9.46 },
+                      { label: "Febrero", y: 9.27 },
+                      { label: "Marzo", y: 8.99 },
+                      { label: "Abril", y: 7.45 },
+                      { label: "Mayo", y: 9.92 },
+                      { label: "Junio", y: 7.1 }
+                    ]
+                  }]
+                });
+                chart.render();
+
+                function toggleDataSeries(e) {
+                  if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                  }
+                  else {
+                    e.dataSeries.visible = true;
+                  }
+                  chart.render();
+                }
+
+              }
+            </script>
+            
+            <center><div id="chartContainer" style="height: 370px; width: 70%;"></div></center>
+
+            <button class="btn invisible" id="backButton">Back</button>
+          </div>
+
+    </section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script>
+        let navegacion = document.querySelector('.navegacion');
+        let toglee = document.querySelector('.toglee');
+        toglee.onclick = function () {
+            navegacion.classList.toggle('active')
+        }
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>

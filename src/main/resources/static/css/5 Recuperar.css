@@ -1,0 +1,278 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colorTextos: #575757;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #9cecfb;
+  background: -webkit-linear-gradient(to right,
+      #0079c1,
+      #2ea3f2,
+      #9cecfb);
+  background: linear-gradient(to right,
+      #0f4a6d,
+      #092335,
+      #00798f);
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 140px;
+  padding: 10px;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #0079c1;
+}
+
+form {
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+form .grupo {
+  position: relative;
+  margin: 45px;
+}
+
+input {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+  outline: none;
+  color: #5e5d5b;
+}
+
+label {
+  color: var(--colorTextos);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+  top: -14px;
+  font-size: 20px;
+  color: #0079c1;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right,
+      #0079c1,
+      #2ea3f2,
+      #9cecfb);
+  transition: 0.3s ease width;
+  left: 0px;
+}
+
+input:focus~.barra::before {
+  width: 100%;
+}
+
+button {
+  background: #0070b8;
+  border: none;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2ea3f2;
+}
+
+.link1 {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+
+p {
+  text-align: center;
+  color: #0079c1;
+}
+
+.link {
+  text-decoration: none;
+  color: #0070b8;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: #2ea3f2;
+}
+
+.inputch {
+  text-align: center;
+}
+
+p label .inputch {
+  color: crimson;
+}
+
+@media screen and (max-width:500px) {
+  .form {
+    width: 80%;
+  }
+}
+
+
+.container__background-triangulo {
+  max-width: 1200px;
+  height: 600px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.triangulo {
+  width: 300px;
+  height: 300px;
+  background: red;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.triangulo1 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to left, #006aa876, #32adff6f);
+  right: 300px;
+  top: -100px;
+  animation: t1 3s ease infinite;
+}
+
+.triangulo3 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to left, #1b8fc560, #df0f8f55);
+  left: 300px;
+  animation: t3 3s ease infinite;
+}
+
+.triangulo4 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to left, #1b8fc563, #b48da55c);
+  left: -400px;
+  top: 350px;
+  animation: t3 3s ease infinite;
+}
+
+.triangulo5 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to left, #1b8fc56e, #0fc7df6a);
+  left: 400px;
+  top: 400px;
+  animation: t3 3s ease infinite;
+}
+
+@keyframes t1 {
+  0% {
+    transform: rotate(50deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(50deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(50deg) translateY(0px);
+  }
+}
+
+@keyframes t3 {
+  0% {
+    transform: rotate(50deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(50deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(50deg) translateY(0px);
+  }
+}
+
+@keyframes t4 {
+  0% {
+    transform: rotate(80deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(80deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(80deg) translateY(0px);
+  }
+}
+
+@keyframes t5 {
+  0% {
+    transform: rotate(80deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(80deg) translateY(20px);
+  }
+
+  100% {
+    transform: rotate(80deg) translateY(0px);
+  }
+}
+

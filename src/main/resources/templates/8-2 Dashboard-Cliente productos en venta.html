@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../CSS/8-2 Dashboard-Cliente productos en venta.css">
+    <link rel="icon" href="../IMG/Logo de pestaña.PNG">
+    <title>Productos En Venta | Industrias Asociadas</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Encabezado -->
+        <div class="row justify-centent-center aling-content-center">
+            <div class="col-12 encabezado">
+                <h5>
+                    <i class='bx bxs-phone icon-e'></i> (601)371 2999) &nbsp;&nbsp;
+                    <i class='bx bx-envelope icon-e'></i> ventas@industriasasociadas.com
+                    <img src="../IMG/logo_de_colombia.jpeg" alt width="30" />
+                </h5>
+            </div>
+        </div>
+
+        <!-- Barra de navegacion -->
+        <nav class="navbar navbar-expand-lg navbar-light info barra">
+
+            <a class="navbar-brand" th:href="@{/inicio/inicio}">
+                <img src="../IMG/Logo barra.png" style="width: 350px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse contenedor" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- BOTONES -->
+                    <li class="nav-item active botn">
+                        <a class="nav-link" th:href="@{/inicio/inicio}">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/inventario/productos}">Productos<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/marcas/marcas}">Marcas<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active  botn">
+                        <a class="nav-link" th:href="@{/perfilC/perfil_cliente}">Cuenta<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <li id="item">
+                            <div class="buscar">
+                                <i class='bx bx-search-alt-2'></i><input type="text" placeholder="   Buscar Producto"
+                                    required></i>
+                            </div>
+                        </li>
+                    </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="linea">
+            <center>
+                <h1>Productos En Venta</h1>
+                <hr width="500">
+            </center>
+        </div>
+
+        <div class="body">
+            <div class="container__card">
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto1.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Minitermómetro De Infrarrojos De Amplio rango 42510A</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: FESTO</h6>
+                        <h5>Categoria: Sistema para vapor</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1"><s>0%</s></span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$187.500</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto2.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Termostato Industrial RT</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: Danfoss</h6>
+                        <h5>Categoria: Válvulas</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">15%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$235.500</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto3.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Presostato Para Aplicaciones Livianas KPI</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: AUTONICS</h6>
+                        <h5>Categoria: Temperatura</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1"><s>0%</s></span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$575.850</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto4.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Presostato Para Bombas Y Compresosres CS</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: ROCKAGE</h6>
+                        <h5>Categoria: Humedad</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">30%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$460.590</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto5.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Termohigrómetro Digital Para Exteriores e Interiores</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: SPENCE</h6>
+                        <h5>Categoria: Neumática</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">20%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$782.547</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto6.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Transmisor De Humedad / Temperatura THD-R</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: CEM</h6>
+                        <h5>Categoria: Herramientas Ambientales</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">5%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$762.400</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto7.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Regulador de Presión D-36</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: DWYER</h6>
+                        <h5>Categoria: Herramientas Electricas</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">3%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$856.250</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto8.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Tacometro Con Y Sin Contacto DT-6236B</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: HANNA INSTRUMENTS</h6>
+                        <h5>Categoria: Sensores Y Controladores</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">45%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$564.715</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto9.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Cilindro Redondo ISO 6432 DSNU</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: AUTONICS</h6>
+                        <h5>Categoria: Nivel/Indicadores</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">20%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$458.974</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto10.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Bobinas A Prueba De Explosion EXX</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: DWYER</h6>
+                        <h5>Categoria: Temperatura</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1"><s>0%</s></span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$564.968</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto11.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Detectores De Voltaje AC-10</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: WEKA</h6>
+                        <h5>Categoria: Válvulas</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">65%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$369.275</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+                <div class="cards b1">
+                    <div class="prod">
+                        <img src="../IMG/Productos/producto12.PNG" alt="">
+                    </div>
+                    <div class="nom">
+                        <h5>Interruptor De Nivel Tipo Paleta Rotativa Serie DBLM6B</h5>
+                    </div>
+                    <div class="info__descripcion">
+                        <h6>Marca: EXTECH</h6>
+                        <h5>Categoria: Sistema para vapor</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae libero perspiciatis
+                            soluta dignissimos harum non alias incidunt? Assumenda cum non tenetur totam blanditiis
+                            voluptatum numquam vitae sunt, minus voluptatibus. Corrupti hic accusantium vitae? Ullam
+                            cumque deserunt atque magni officia expedita accusantium non mollitia, praesentium pariatur
+                            iusto repudiandae, illum ab!
+                        </p>
+                        <div class="precio">
+                            <span class="precio1">20%</span>&nbsp;&nbsp;
+                            <span class="precio2"><b>$952.632</b></span>
+                        </div>
+                        <a class="btn" th:href="@{/descargar/new}">COMPRAR AHORA</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="bg-dark text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class='bx bxl-facebook ic'></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class='bx bxl-twitter ic'></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class='bx bxl-google ic'></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                            class='bx bxl-instagram ic'></i></a>
+
+
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(15, 73, 182, 0.801);">
+                © 2022 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">GAES 6</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!--  Scripts de validación-->
+    <script src="../JS/4 Formulario index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
