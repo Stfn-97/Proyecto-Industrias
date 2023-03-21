@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import com.industrias.demo.modelo.productos;
+import com.industrias.demo.modelo.ventas;
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
 import com.lowagie.text.Font;
@@ -21,15 +21,14 @@ import com.lowagie.text.pdf.PdfWriter;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-public class datosProductosPdf {
-	private List<productos> Productos;
-
-	public datosProductosPdf(List<productos> productos) {
+public class descargarInformePdf {
+	private List<ventas> Ventas;
+	
+	public descargarInformePdf(List<ventas> ventas) {
 		super();
-		Productos = productos;
+		Ventas = ventas;
 	}
 	
-
 	
 	
 	private void escribirEncabezadoTabla(PdfPTable tabla) {
@@ -41,29 +40,32 @@ public class datosProductosPdf {
 		font.setColor(Color.WHITE);
 		
 		
-		cell.setPhrase(new Phrase("ID Producto", font));
+		cell.setPhrase(new Phrase("ID Venta", font));
 		
 		tabla.addCell(cell);
 		
-		cell.setPhrase(new Phrase("Nombre Producto", font));
+		cell.setPhrase(new Phrase("Fecha de venta", font));
 		tabla.addCell(cell);
 		
-		cell.setPhrase(new Phrase("Descripcion", font));
+		cell.setPhrase(new Phrase("Unidades adquiridas", font));
 		tabla.addCell(cell);
 		
-		cell.setPhrase(new Phrase("Marca", font));
+		cell.setPhrase(new Phrase("Precio unidad", font));
+		tabla.addCell(cell);
+		
+		cell.setPhrase(new Phrase("Precio total", font));
 		tabla.addCell(cell);
 	}
 	
 	
-	
 	private void escribirDatosTabla(PdfPTable tabla) {
 		
-		for (productos Productos : Productos) {
-			tabla.addCell(String.valueOf(Productos.getID_Producto()));
-			tabla.addCell(Productos.getNombre_Producto());
-			tabla.addCell(Productos.getDescripcion());
-			tabla.addCell(Productos.getMarca());
+		for (ventas Ventas : Ventas) {
+			tabla.addCell(String.valueOf(Ventas.getID_Venta()));
+			tabla.addCell(String.valueOf(Ventas.getFecha_y_hora_venta()));
+			tabla.addCell(String.valueOf(Ventas.getUnidades_adquiridas()));
+			tabla.addCell(String.valueOf(Ventas.getPrecio_unidad()));
+			tabla.addCell(String.valueOf(Ventas.getPrecio_total()));
 		}
 		
 	}
@@ -84,16 +86,16 @@ public class datosProductosPdf {
 		font.setColor(Color.BLUE);
 		font.setSize(18);
 		
-		Paragraph title = new Paragraph("Lista de datos de productos en inventario", font);
+		Paragraph title = new Paragraph("Lista de ventas", font);
 		title.setAlignment(Paragraph.ALIGN_CENTER);
 		document.add(title);
 		document.add(new Paragraph("Fecha y hora de exportación: " + currentDateTime));
 		
 		
-		PdfPTable tabla = new PdfPTable(4);
+		PdfPTable tabla = new PdfPTable(5);
 		tabla.setWidthPercentage(100);
 		tabla.setSpacingBefore(15);
-		tabla.setWidths(new float [] {2.0f, 3.5f, 3.0f, 1.5f});
+		tabla.setWidths(new float [] {1.0f, 2.5f, 1.5f, 1.0f, 1.0f});
 		
 		
 		

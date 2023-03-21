@@ -1,6 +1,9 @@
 package com.industrias.demo.controler;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,8 +71,12 @@ public class controlador_dash_empleado_datos_producto {
 	@GetMapping("/empleado_datos_productos/exportar")
 	public void exportarPDF(HttpServletResponse response) throws DocumentException, IOException {
 		response.setContentType("application/pdf");
+		
+		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+		String currentDateTime = dateFormatter.format(new Date());
+		
 		String claveEncabezado = "Content-Disposition";
-		String valorEncabezado = "attachment; filename=datos_de_productos.pdf";
+		String valorEncabezado = "attachment; filename=datos_de_productos_" + currentDateTime + ".pdf";
 		
 		response.setHeader(claveEncabezado, valorEncabezado);
 		

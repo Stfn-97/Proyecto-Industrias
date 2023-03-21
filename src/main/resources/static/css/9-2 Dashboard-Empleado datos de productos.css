@@ -310,3 +310,7 @@ body{
     border: solid 3px black;
     border-radius: 5px;
 }
+
+.botonPDF{
+	margin: 20px;
+}
