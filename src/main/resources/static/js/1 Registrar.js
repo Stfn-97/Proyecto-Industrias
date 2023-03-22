@@ -9,7 +9,7 @@ function registrar() {
     var direccion = document.getElementById("direccion").value;
     var ciudad = document.getElementById("ciudad").value;
 
-    expresion1 = /\w+@\w+\.+[a-z]/;
+    expresion1 = /^w+@[a-zA-Z_]+?.[a-zA-Z] {2,3}$/;
     expresion2 = / ^\d{7,10}$/;
 
 
