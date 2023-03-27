@@ -4,41 +4,45 @@ function validar() {
     var nombre = document.getElementById("nombre").value;
     var contraseña = document.getElementById("contraseña").value;
 
-    expresion1 = /\w+@\w+\.+[a-z]/;
-    expresion2 = / ^\d{7,10}$/;
+    const expresionNombre = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]{1,20}$/;
+    const expresionContraseña = /^[a-zA-Z0-9!@#$%^&*()_+\-=[\]{}|\\:;"'<,>.?/]{1,20}$/;
 
 
-    if (nombre | contraseña == "") {
+
+    if (nombre.trim() === '' ||
+        contraseña.trim() === '') {
         Swal.fire({
             icon: 'error',
-            title: 'OOPS...',
-            text: '¡Parece que no llenaste ningún campo o te saltaste alguno, verifica por favor!',
-            footer: 'INDUSTRIAS ASOCIADAS S.A.S'
-          })
+            title: 'Error',
+            text: 'Por favor complete todos los campos.',
+            footer: 'Industrias Asociadas S.A.S Tienda En Linea'
+        });
         return false;
     }
 
-    if (nombre == "") {
-        Swal.fire('¡Debe escribir sus nombres!')
-        return false;
-    }
-    if (nombre.length > 30) {
-        Swal.fire('¡Los nombres pasan el rango de 30 caracteres!')
-        return false;
 
-    }
 
-    if (contraseña == "") {
-        Swal.fire('¡Escriba una contraseña!')
+    if (!expresionNombre.test(nombre)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo nombre no es válido.',
+            text: 'Ingreso dígitos no permitidos o supera más de los 20 caracteres.'
+        });
         return false;
     }
 
-    if (contraseña.length > 20) {
-        Swal.fire('¡Su contraseña pasa el rango de 20 caracteres!')
-        return false;
 
+    if (!expresionContraseña.test(contraseña)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo contraseña no es válido.',
+            text: 'La contraseña no cumple con los requisitos de seguridad o supera los 20 caracteres.'
+        });
+        return false;
     }
+
 }
+
 
 function iniciar() {
     const Toast = Swal.mixin({
@@ -48,13 +52,13 @@ function iniciar() {
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
-      
-      Toast.fire({
+    })
+
+    Toast.fire({
         icon: 'success',
-        title: 'Inicio de cuenta exitoso'
-      })
+        title: 'Inicio de cuenta exitoso.'
+    })
 }

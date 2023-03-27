@@ -1,47 +1,53 @@
 function recuperar() {
 
-    var email;
+  var email;
 
-    var email = document.getElementById("email").value;
+  var email = document.getElementById("email").value;
 
-    expresion1 = /\w+@\w+\.+[a-z]/;
+  const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-    if (email == "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'OOPS...',
-            text: '¡Parece que no llenaste ningún campo o te saltaste alguno, verifica por favor!',
-            footer: 'INDUSTRIAS ASOCIADAS S.A.S'
-          })
-        return false;
-    }
 
-    if (email == 0) {
-        Swal.fire('¡Debe escribir su correo!')
-        return false;
-    }
-    if (!expresion1.test(email)) {
-        Swal.fire('¡Su correo no es valido!')
-        return false;
-    }
+  if (email.trim() === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Por favor complete el campo para realizar la solicitud.',
+      footer: 'Industrias Asociadas S.A.S Tienda En Linea'
+    });
+    return false;
+  }
+
+
+
+  if (!expresionEmail.test(email)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'El campo email no es válido.',
+      text: 'Introduce una dirección de correo electrónico válida.',
+    });
+    return false;
+  }
+
+
 }
 
-function rec(){
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      
-      Toast.fire({
-        icon: 'success',
-        title: 'Petición enviada correctamente'
-      })
+
+function rec() {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+
+  Toast.fire({
+    icon: 'success',
+    title: 'Su solicitud se ha enviado correctamente'
+  })
 }

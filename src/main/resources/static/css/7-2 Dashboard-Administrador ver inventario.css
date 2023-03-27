@@ -408,8 +408,8 @@ body{
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
     overflow: hidden;
 }
 

@@ -8,63 +8,78 @@ function opinion() {
     var ciudad = document.getElementById("ciudad").value;
     var mensaje = document.getElementById("mensaje").value;
 
-    expresion1 = /\w+@\w+\.+[a-z]/;
-    expresion2 = / ^\d{7,10}$/;
+    const expresionNombre = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]{1,20}$/;
+    const expresionApellidos = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s'-]{1,20}$/;
+    const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const expresionCiudad = /^[a-zA-Z\s]{1,25}$/;
+    const expresionMensaje = /^.{1,100}$/;
 
 
-    if (nombres | apellidos | email | ciudad | mensaje == "") {
+    if (nombres.trim() === '' ||
+        apellidos.trim() === '' ||
+        email.trim() === '' ||
+        ciudad.trim() === '' ||
+        mensaje.trim() === '') {
         Swal.fire({
             icon: 'error',
-            title: 'OOPS...',
-            text: '¡Parece que no lleno ningún campo o se salto alguno, verifique por favor!',
-            footer: 'INDUSTRIAS ASOCIADAS S.A.S'
-          })
+            title: 'Error',
+            text: 'Por favor complete todos los campos.',
+            footer: 'Industrias Asociadas S.A.S Tienda En Linea'
+        });
         return false;
     }
 
-    if (nombres == "") {
-        Swal.fire('¡Debe escribir sus nombres!')
-        return false;
-    }
-    if (nombres.length > 30) {
-        Swal.fire('¡Los nombres pasa el rango de caracteres (30)!')
+
+    if (!expresionNombre.test(nombres)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo nombres no es válido.',
+            text: 'Ingreso dígitos no permitidos o supera más de los 20 caracteres.'
+        });
         return false;
     }
 
-    if (apellidos == "") {
-        Swal.fire('¡Debe escribir sus apellidos!')
-        return false;
-    }
-    if (apellidos.length > 30) {
-        Swal.fire('¡Los apellidos pasa el rango de caracteres (30)!')
+
+    if (!expresionApellidos.test(apellidos)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo apellido no es válido.',
+            text: 'Ingreso dígitos no permitidos o supera más de los 20 caracteres.'
+        });
         return false;
     }
 
-    if (email == 0) {
-        Swal.fire('¡Debe escribir su correo!')
-        return false;
-    }
-    if (!expresion1.test(email)) {
-        Swal.fire('¡Su correo no es valido!')
+
+    if (!expresionEmail.test(email)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo email no es válido.',
+          text: 'Introduce una dirección de correo electrónico válida.',
+        });
         return false;
     }
     
-    if (ciudad == "") {
-        Swal.fire('¡Debe escribir su ciudad!')
+
+    if (!expresionCiudad.test(ciudad)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo ciudad no es válido.',
+          text: 'Introduce una ciudad con máximo 25 caracteres, sin caracteres especiales ni números.',
+        });
         return false;
     }
-    if (ciudad.length > 20) {
-        Swal.fire('¡El nombre de la cuidad pasa el rango de caracteres (20)!')
+
+
+    if (!expresionMensaje.test(mensaje)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo mensaje no es válido.',
+          text: 'Introduce un mensaje hasta máximo 100 caracteres.',
+        });
         return false;
     }
-    if (mensaje == "") {
-        Swal.fire('¡Debe escribir su mensaje!')
-        return false;
-    }
-    if (mensaje.length > 50) {
-        Swal.fire('¡El mensaje pasa el rango de caracteres (50)!')
-        return false;
-    }
+
+
 }
 
 function enviar() {

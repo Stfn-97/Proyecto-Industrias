@@ -1,99 +1,109 @@
 function registrar() {
+    const nombres = document.getElementById('nombres').value;
+    const apellidos = document.getElementById('apellidos').value;
+    const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
+    const documento = document.getElementById('documento').value;
+    const direccion = document.getElementById('direccion').value;
+    const ciudad = document.getElementById('ciudad').value;
 
-    var nombres, apellidos, email, telefono, documento, direccion, ciudad;
-    var nombres = document.getElementById("nombres").value;
-    var apellidos = document.getElementById("apellidos").value;
-    var email = document.getElementById("email").value;
-    var telefono = document.getElementById("telefono").value;
-    var documento = document.getElementById("documento").value;
-    var direccion = document.getElementById("direccion").value;
-    var ciudad = document.getElementById("ciudad").value;
-
-    expresion1 = /^w+@[a-zA-Z_]+?.[a-zA-Z] {2,3}$/;
-    expresion2 = / ^\d{7,10}$/;
+    const expresionNombre = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]{1,20}$/;
+    const expresionApellidos = /^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s'-]{1,20}$/;
+    const expresionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const expresionTelefono = /^[0-9]{10}$/;
+    const expresionDocumento = /^[0-9\s\-]{7,15}$/;
+    const expresionDireccion = /^[a-zA-Z0-9\s\-\#\/]{1,30}$/;
+    const expresionCiudad = /^[a-zA-Z\s]{1,25}$/;
 
 
-    if (nombres | apellidos | email | telefono | documento | direccion | ciudad == "") {
+    if (nombres.trim() === '' ||
+        apellidos.trim() === '' ||
+        email.trim() === '' ||
+        telefono.trim() === '' ||
+        documento.trim() === '' ||
+        direccion.trim() === '' ||
+        ciudad.trim() === '') {
         Swal.fire({
             icon: 'error',
-            title: 'OOPS...',
-            text: '¡Parece que no llenaste ningún campo o te saltaste alguno, verifica por favor!',
-            footer: 'INDUSTRIAS ASOCIADAS S.A.S'
-          })
+            title: 'Error',
+            text: 'Por favor complete todos los campos.',
+            footer: 'Industrias Asociadas S.A.S Tienda En Linea'
+        });
         return false;
     }
 
-    if (nombres == "") {
-        Swal.fire('¡Debe escribir su nombre!')
-        return false;
-    }
-    if (nombres.length > 20) {
-        Swal.fire('¡El nombre pasa el rango de caracteres!')
-        return false;
-    }
-    
-    if (apellidos == "") {
-        Swal.fire('¡Debe escribir sus apellidos!')
-        return false;
-    }
-    
-    if (apellidos.length > 20) {
-        Swal.fire('¡Los apellidos pasa el rango de caracteres!')
+
+    if (!expresionNombre.test(nombres)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo nombre no es válido.',
+            text: 'Ingreso dígitos no permitidos o supera más de los 20 caracteres.'
+        });
         return false;
     }
 
-    if (email == 0) {
-        Swal.fire('¡Debe escribir su correo!')
-        return false;
-    }
-    if (!expresion1.test(email)) {
-        Swal.fire('¡Su correo no es valido!')
+
+    if (!expresionApellidos.test(apellidos)) {
+        Swal.fire({
+            icon: 'error',
+            title: 'El campo apellido no es válido.',
+            text: 'Ingreso dígitos no permitidos o supera más de los 20 caracteres.'
+        });
         return false;
     }
 
-    if (telefono == "") {
-        Swal.fire('¡Escriba un telefono!')
+
+    if (!expresionEmail.test(email)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo email no es válido.',
+          text: 'Introduce una dirección de correo electrónico válida.',
+        });
         return false;
     }
 
-    if (telefono.length > 10) {
-        Swal.fire('¡Su telefono pasa el rango de 10 caracteres!')
-        return false;
 
-    }
-    
-    if (documento == "") {
-        Swal.fire('¡Escriba un documento!')
-        return false;
-    }
-
-    if (documento.length > 15) {
-        Swal.fire('¡Su documento pasa el rango de 15 caracteres!')
-        return false;
-
-    }
-    
-    if (direccion == "") {
-        Swal.fire('¡Escriba una direccion!')
+    if (!expresionTelefono.test(telefono)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo celular no es válido.',
+          text: 'Introduce un número de celular de 10 dígitos sin espacios ni guiones.',
+        });
         return false;
     }
 
-    if (direccion.length > 20) {
-        Swal.fire('¡Su direccion pasa el rango de 20 caracteres!')
-        return false;
 
-    }
-    
-    if (ciudad == "") {
-        Swal.fire('¡Escriba una ciudad!')
+    if (!expresionDocumento.test(documento)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo documento no es válido.',
+          text: 'Introduce un número de documento de 7 a 15 dígitos sin espacios ni guiones.',
+        });
         return false;
     }
+
+
+    if (!expresionDireccion.test(direccion)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo dirección no es válido.',
+          text: 'Introduce una dirección alfanumérica hasta máximo 30 caracteres, sin caracteres especiales excepto espacios, guiones o símbolo numeral.',
+        });
+        return false;
+    }
+
+
+    if (!expresionCiudad.test(ciudad)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'El campo ciudad no es válido.',
+          text: 'Introduce una ciudad con máximo 25 caracteres, sin caracteres especiales ni números.',
+        });
+        return false;
+    }
+
 }
 
-
-$("#registro").click(function(){
-	
-});
 
 function registro() {
     const Toast = Swal.mixin({
@@ -103,13 +113,13 @@ function registro() {
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
-      
-      Toast.fire({
+    })
+
+    Toast.fire({
         icon: 'success',
-        title: 'Registro exitoso'
-      })
+        title: 'Registro exitoso.'
+    })
 }
