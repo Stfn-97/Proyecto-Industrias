@@ -64,12 +64,24 @@
 			placeholder="Direccion" class="input-50 barra"><span
 			  class="barra"></span>
 		  </div>
+		  
+		   <div class="grupo">
+              <input hidden type="text" th:field="*{rol}" id="rol" name="rol"
+                     placeholder="Rol" class="input-50 barra"><span
+                  class="barra"></span>
+          </div>
 
 		  <div class="grupo">
 			<input type="text" th:field="*{Ciudad}" id="ciudad" name="ciudad" 
 			placeholder="Ciudad" class="input-50 barra"><span
 			  class="barra"></span>
 		  </div>
+
+          <div class="grupo">
+              <input type="password" th:field="*{password}" id="password" name="password"
+                     placeholder="Password" class="input-50 barra"><span
+                  class="barra"></span>
+          </div>
   
         <button type="submit" value="Registrar" class="btn-enviar" onclick="registro()">Registrarse</button>
   

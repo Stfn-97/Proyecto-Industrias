@@ -24,18 +24,18 @@
 		<div class="triangulo triangulo5"></div>
 	</div>
 
-	<form class="form-register" method="post" onsubmit="/* return */ validar()"
+	<form class="form-register" th:action="@{/registrarUsuario/login}" th:object=${validacion} method="post" onsubmit="/* return */ validar()"
 		action="../HTML/2 Index - Usuario.html">
 		<img class="logo" src="/IMG/Logo barra.png" alt="">
 		<div class="form contenedor-inputs">
 			<h1>Iniciar Sesión</h1>
 			<div class="grupo">
-				<input type="text" id="nombre" name="nombre" placeholder="Nombres"
+				<input type="text" th:field="*{usuario}" id="nombre" name="nombre" placeholder="Nombres"
 					class="input-50 barra" autofocus><span class="barra"></span>
 			</div>
 
 			<div class="grupo">
-				<input type="password" id="contraseña" name="contraseña"
+				<input type="password" th:field="*{password}" id="contraseña" name="contraseña"
 					placeholder="Contraseña" class="input-50 barra"><span
 					class="barra"></span>
 			</div>
@@ -72,7 +72,7 @@
 		crossorigin="anonymous"></script>
 
 	<!--  Scripts de validación-->
-	<script src="/JS/2 Iniciar.js"></script>
+	<script src=""></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

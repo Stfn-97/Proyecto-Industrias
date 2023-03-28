@@ -12,38 +12,42 @@ import jakarta.persistence.Table;
 public class usuarios {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int ID_Usuario;
+	private Integer ID_Usuario;
 	private String Nombres;
 	private String Apellidos;
-	private String Email;
-	private int Telefono;
+	private String email;
+	private String Telefono;
 	private int Documento;
 	private String Direccion;
+
+	private String rol;
 	private String Ciudad;
+
+	private String password;
 
 	public usuarios() {
 
 	}
 
-	public usuarios(int iD_Usuario, String nombres, String apellidos, String email, int telefono, int documento,
-			String direccion, String ciudad) {
-		super();
-		ID_Usuario = iD_Usuario;
+	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String rol, String ciudad, String password) {
+		this.ID_Usuario = ID_Usuario;
 		Nombres = nombres;
 		Apellidos = apellidos;
-		Email = email;
+		this.email = email;
 		Telefono = telefono;
 		Documento = documento;
 		Direccion = direccion;
+		this.rol = rol;
 		Ciudad = ciudad;
+		this.password = password;
 	}
 
-	public int getID_Usuario() {
+	public Integer getID_Usuario() {
 		return ID_Usuario;
 	}
 
-	public void setID_Usuario(int iD_Usuario) {
-		ID_Usuario = iD_Usuario;
+	public void setID_Usuario(Integer ID_Usuario) {
+		this.ID_Usuario = ID_Usuario;
 	}
 
 	public String getNombres() {
@@ -63,18 +67,18 @@ public class usuarios {
 	}
 
 	public String getEmail() {
-		return Email;
+		return email;
 	}
 
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
 
-	public int getTelefono() {
+	public String getTelefono() {
 		return Telefono;
 	}
 
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		Telefono = telefono;
 	}
 
@@ -94,11 +98,27 @@ public class usuarios {
 		Direccion = direccion;
 	}
 
+	public String getRol() {
+		return rol;
+	}
+
+	public void setRol(String rol) {
+		this.rol = rol;
+	}
+
 	public String getCiudad() {
 		return Ciudad;
 	}
 
 	public void setCiudad(String ciudad) {
 		Ciudad = ciudad;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

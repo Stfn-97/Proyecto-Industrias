@@ -1,5 +1,7 @@
 package com.industrias.demo.controler;
 
+import com.industrias.demo.modelo.validacion;
+import com.industrias.demo.service.IvalidationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +23,18 @@ public class controlador_registrar {
 
 	@Autowired
 	private IusuariosService service;
-	
+	@Autowired
+	private IvalidationService validador;
+	@PostMapping("/login")
+	public String Logueo(validacion v, Model model){
+		usuarios u = validador.ValidarUsuario(v);
+		if (u == null){
+			return "4 Iniciar.html";
+		}
+		else {
+			return "7 Dashboard-Administrador.html";
+		}
+	}
 	//AGREGAR//
 	@GetMapping("/registrar_usuario")
 	public String agregar(Model model) {
