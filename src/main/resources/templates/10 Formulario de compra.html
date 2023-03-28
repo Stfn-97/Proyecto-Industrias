@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/10%20Formulario%20de%20compra.css">
-    <link rel="icon" href="/IMG/Logo de pestaña.PNG">
+    <link rel="icon" href="/img/Logo%20de%20pestaña.PNG">
     <title>Formulario de Compra | Industrias Asociadas</title>
 </head>
 
@@ -23,7 +23,7 @@
                 <h5>
                     <i class='bx bxs-phone icon-e'></i> (601)371 2999)&nbsp;&nbsp;
                     <i class='bx bx-envelope icon-e'></i> ventas@industriasasociadas.com
-                    <img src="/IMG/logo_de_colombia.jpeg" alt width="30" />
+                    <img src="/img/logo_de_colombia.jpeg" alt width="30" />
                 </h5>
             </div>
         </div>
@@ -32,7 +32,7 @@
         <nav class="navbar navbar-expand-lg navbar-light info barra">
 
             <a class="navbar-brand" th:href="@{/inicio}">
-                <img src="/IMG/Logo barra.png" style="width: 350px;">
+                <img src="/img/Logo%20barra.png" style="width: 350px;">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -86,7 +86,7 @@
                 <h3>FORMULARIO DE COMPRA&nbsp;<i class='bx bx-shopping-bag bx-tada' ></i></h3>
 
                 <center><div class="BT">
-                    <img class="prodct-img" src="/IMG/Productos/producto2.PNG" width="20%" height="20%">
+                    <img class="prodct-img" src="/img/Productos/producto2.PNG" width="20%" height="20%">
                 </div></center>
 
                 <form th:action="@{/descargar/guardar}" th:object="${Ventas}" method="post">
@@ -102,7 +102,7 @@
                     </p>
                     
                     <p>
-                        <label for="correo">Email</label>
+                        <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Escriba su correo..." required>
                     </p>
 

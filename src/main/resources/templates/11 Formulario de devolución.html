@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/11%20Formulario%20de%20devolución.css">
-    <link rel="icon" href="/IMG/Logo de pestaña.PNG">
+    <link rel="icon" href="/img/Logo%20de%20pestaña.PNG">
     <title>Formulario de Devolución | Industrias Asociadas</title>
 </head>
 
@@ -23,7 +23,7 @@
                 <h5>
                     <i class='bx bxs-phone icon-e'></i> (601)371 2999)&nbsp;&nbsp;
                     <i class='bx bx-envelope icon-e'></i> ventas@industriasasociadas.com
-                    <img src="/IMG/logo_de_colombia.jpeg" alt width="30" />
+                    <img src="/img/logo_de_colombia.jpeg" alt width="30" />
                 </h5>
             </div>
         </div>
@@ -32,7 +32,7 @@
         <nav class="navbar navbar-expand-lg navbar-light info barra">
 
             <a class="navbar-brand" th:href="@{/inicio}">
-                <img src="/IMG/Logo barra.png" style="width: 350px;">
+                <img src="/img/Logo%20barra.png" style="width: 350px;">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -86,18 +86,18 @@
                 <h3>FORMULARIO DE DEVOLUCIÓN&nbsp;<i class='bx bx-arrow-back bx-tada'></i></h3>
 
                 <center><div class="BT">
-                    <img class="prodct-img" src="/IMG/Img-Devolución.png" width="25%" height="20%">
+                    <img class="prodct-img" src="/img/Img-Devolución.png" width="25%" height="20%">
                 </div></center>
                 
                 <form action="@{/inicioUsuario/inicio_usuario" onsubmit=" /*return*/ devolucion()">
 
                     <p class="BT">
-                        <label for="fac1">Número de factura</label>
+                        <label for="fac">Número de factura</label>
                         <input type="text" id="fac" placeholder="Escriba el número de la factura de compra...">
                     </p>
 
                     <p class="BT">
-                        <label for="sucursal1">Sucursal donde se realizo la compra</label>
+                        <label for="sucursal">Sucursal donde se realizo la compra</label>
                         <select id="sucursal">
                             <option selected id="nada"></option>
                             <option>Bogotá </option>
@@ -109,12 +109,12 @@
                     </p>
 
                     <p>
-                        <label for="telefono1">Teléfono de contacto</label>
+                        <label for="telefono">Teléfono de contacto</label>
                         <input type="text" id="telefono" placeholder="Escriba su teléfeno...">
                     </p>
 
                     <p>
-                        <label for="correo1">Correo electronico</label>
+                        <label for="correo">Correo electronico</label>
                         <input type="text" id="email" placeholder="Escriba su correo...">
                     </p>
 
