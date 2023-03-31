@@ -24,8 +24,7 @@
 		<div class="triangulo triangulo5"></div>
 	</div>
 
-	<form class="form-register" th:action="@{/registrarUsuario/login}" th:object=${validacion} method="post" onsubmit="/* return */ validar()"
-		action="../HTML/2 Index - Usuario.html">
+	<form class="form-register" th:action="@{/iniciarSesion/login}" th:object=${usuario} method="post" onsubmit="/* return */ validar()">
 		<img class="logo" src="/img/Logo%20barra.png" alt="">
 		<div class="form contenedor-inputs">
 			<h1>Iniciar Sesión</h1>

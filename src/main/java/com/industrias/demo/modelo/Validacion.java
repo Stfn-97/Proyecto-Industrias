@@ -1,6 +1,10 @@
 package com.industrias.demo.modelo;
 
-public class validacion {
+import org.springframework.stereotype.Component;
+
+@Component
+public class Validacion {
+
     private String usuario;
     private String password;
 
@@ -20,10 +24,10 @@ public class validacion {
         this.password = password;
     }
 
-    public validacion() {
+    public Validacion() {
     }
 
-    public validacion(String usuario, String password) {
+    public Validacion(String usuario, String password) {
         this.usuario = usuario;
         this.password = password;
     }

@@ -1,10 +1,6 @@
 package com.industrias.demo.modelo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 
 @Entity
@@ -19,17 +15,14 @@ public class usuarios {
 	private String Telefono;
 	private int Documento;
 	private String Direccion;
-
-	private String rol;
 	private String Ciudad;
-
 	private String password;
+	private Long ID_rol;
 
 	public usuarios() {
-
 	}
 
-	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String rol, String ciudad, String password) {
+	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String ciudad, String password, Long ID_rol) {
 		this.ID_Usuario = ID_Usuario;
 		Nombres = nombres;
 		Apellidos = apellidos;
@@ -37,9 +30,9 @@ public class usuarios {
 		Telefono = telefono;
 		Documento = documento;
 		Direccion = direccion;
-		this.rol = rol;
 		Ciudad = ciudad;
 		this.password = password;
+		this.ID_rol = ID_rol;
 	}
 
 	public Integer getID_Usuario() {
@@ -98,14 +91,6 @@ public class usuarios {
 		Direccion = direccion;
 	}
 
-	public String getRol() {
-		return rol;
-	}
-
-	public void setRol(String rol) {
-		this.rol = rol;
-	}
-
 	public String getCiudad() {
 		return Ciudad;
 	}
@@ -120,5 +105,13 @@ public class usuarios {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Long getID_rol() {
+		return ID_rol;
+	}
+
+	public void setID_rol(Long ID_rol) {
+		this.ID_rol = ID_rol;
 	}
 }
