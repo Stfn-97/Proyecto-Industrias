@@ -34,7 +34,7 @@ public class controlador_iniciar {
 			return "4 Iniciar.html";
 		}
 		else {
-			return "7 Dashboard-Administrador.html";
+			return "7Dashboard-Administrador.html";
 		}
 	}
 
