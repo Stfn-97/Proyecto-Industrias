@@ -17,12 +17,16 @@ public class usuarios {
 	private String Direccion;
 	private String Ciudad;
 	private String password;
-	private Long ID_rol;
+
+	@ManyToOne
+	@JoinColumn(name = "id_rol")
+	private roles ID_rol;
+
 
 	public usuarios() {
 	}
 
-	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String ciudad, String password, Long ID_rol) {
+	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String ciudad, String password, roles ID_rol) {
 		this.ID_Usuario = ID_Usuario;
 		Nombres = nombres;
 		Apellidos = apellidos;
@@ -107,11 +111,11 @@ public class usuarios {
 		this.password = password;
 	}
 
-	public Long getID_rol() {
+	public roles getID_rol() {
 		return ID_rol;
 	}
 
-	public void setID_rol(Long ID_rol) {
+	public void setID_rol(roles ID_rol) {
 		this.ID_rol = ID_rol;
 	}
 }
