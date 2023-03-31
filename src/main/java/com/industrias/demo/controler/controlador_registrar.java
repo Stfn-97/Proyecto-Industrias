@@ -1,5 +1,6 @@
 package com.industrias.demo.controler;
 
+import com.industrias.demo.interfaceService.IrolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,8 @@ public class controlador_registrar {
 
 	@Autowired
 	private IusuariosService service;
+	@Autowired
+	private IrolRepository rolRepository;
 
 	//AGREGAR//
 	@GetMapping("/registrar_usuario")
@@ -31,6 +34,7 @@ public class controlador_registrar {
 	
 	@PostMapping("/save")
 	public String save(@Validated usuarios u, Model model) {
+		u.setID_rol(rolRepository.findById(2L).get());
 	service.save(u);
 	
 	return "redirect:/registrarUsuario/registrar_usuario";

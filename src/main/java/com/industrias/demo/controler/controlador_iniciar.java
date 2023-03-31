@@ -27,15 +27,20 @@ public class controlador_iniciar {
 	private IvalidationService validador;
 	@PostMapping("/login")
 
-	public String Logueo(Validacion v, Model model){
+	public String Logueo(Validacion v, Model model) {
 		model.addAttribute("usuario", new Validacion());
 		usuarios u = validador.ValidarUsuario(v);
-		if (u == null){
+		if (u == null) {
 			return "4 Iniciar.html";
-		}
-		else {
-			return "7 Dashboard-Administrador.html";
+		} else {
+			if (u.getID_rol().getID_Rol() == 1L) {
+				return "7 Dashboard-Administrador.html";
+			} else if (u.getID_rol().getID_Rol() == 2L) {
+				return "8 Dashboard-Cliente.html";
+			}
+			else {
+				return "9 Dashboard-Empleado.html";
+			}
 		}
 	}
-
 }
