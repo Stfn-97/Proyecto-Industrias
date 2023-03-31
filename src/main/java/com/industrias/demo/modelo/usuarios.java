@@ -13,7 +13,7 @@ public class usuarios {
 	private String Apellidos;
 	private String email;
 	private String Telefono;
-	private int Documento;
+	private String Documento;
 	private String Direccion;
 	private String Ciudad;
 	private String password;
@@ -26,7 +26,7 @@ public class usuarios {
 	public usuarios() {
 	}
 
-	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, int documento, String direccion, String ciudad, String password, roles ID_rol) {
+	public usuarios(Integer ID_Usuario, String nombres, String apellidos, String email, String telefono, String documento, String direccion, String ciudad, String password, roles ID_rol) {
 		this.ID_Usuario = ID_Usuario;
 		Nombres = nombres;
 		Apellidos = apellidos;
@@ -79,11 +79,11 @@ public class usuarios {
 		Telefono = telefono;
 	}
 
-	public int getDocumento() {
+	public String getDocumento() {
 		return Documento;
 	}
 
-	public void setDocumento(int documento) {
+	public void setDocumento(String documento) {
 		Documento = documento;
 	}
 
